@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3lr1kk25254u"]
+
+[ext_resource type="PackedScene" uid="uid://c106viuixocxk" path="res://World/Bush/Bush.tscn" id="2_r0du0"]
+[ext_resource type="PackedScene" uid="uid://cst8kjmfonibr" path="res://Player/player.tscn" id="2_uu6xs"]
+
+[node name="World" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("2_uu6xs")]
+position = Vector2(72.2094, 18.7208)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(6.20923, -1.12894)
+polygon = PackedVector2Array(-5.97106, 0.808136, 48, 0, 48, 120, 98.7808, 127.186, 137.165, 120.412, 134.927, 132.033, 121.924, 157.103, 89.7492, 166.699, 194.177, 164.441, 272.074, 154.845, 289.495, 37.3997, 184, 136, 184, 0, 313.329, 0.597824, 313.329, 178.999, -4.81444, 179.7)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_r0du0")]
+position = Vector2(114.269, 37.2015)
