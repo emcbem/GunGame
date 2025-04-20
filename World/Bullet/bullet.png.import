@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dux4hjjo6euf8"
-path="res://.godot/imported/Bat.png-38405154cd5b8ff1c5e2fcf1cef1c3e6.ctex"
+uid="uid://cadau52b5w1n1"
+path="res://.godot/imported/bullet.png-fd66b207fab3bf8a48fcdbc0506cd241.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Bat.png"
-dest_files=["res://.godot/imported/Bat.png-38405154cd5b8ff1c5e2fcf1cef1c3e6.ctex"]
+source_file="res://World/Bullet/bullet.png"
+dest_files=["res://.godot/imported/bullet.png-fd66b207fab3bf8a48fcdbc0506cd241.ctex"]
 
 [params]
 

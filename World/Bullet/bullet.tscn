@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://55q8eo3fseu4"]
+
+[ext_resource type="Script" uid="uid://ba22ggtfbw031" path="res://World/Bullet/bullet.gd" id="1_8ggyf"]
+[ext_resource type="Texture2D" uid="uid://cadau52b5w1n1" path="res://World/Bullet/bullet.png" id="1_enqoi"]
+[ext_resource type="PackedScene" uid="uid://cboip4c4yv4p" path="res://Hitboxes and Hurtboxes/hitbox.tscn" id="2_rh53y"]
+[ext_resource type="Script" uid="uid://bju2b17gfbq2r" path="res://World/Bullet/bullet_hitbox.gd" id="4_8ggyf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ggyf"]
+radius = 5.84273
+
+[node name="Bullet" type="Node2D"]
+script = ExtResource("1_8ggyf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(23.9577, 30.6686)
+scale = Vector2(1.012, 1)
+texture = ExtResource("1_enqoi")
+
+[node name="Hitbox" parent="." instance=ExtResource("2_rh53y")]
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("4_8ggyf")
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(-1.90735e-06, -0.0630398)
+shape = SubResource("CircleShape2D_8ggyf")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+
+[editable path="Hitbox"]
